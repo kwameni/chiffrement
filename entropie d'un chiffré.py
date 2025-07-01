@@ -88,6 +88,6 @@ analyser_texte("ABCDEF")
 print("\n3. Texte avec quelques répétitions:")
 analyser_texte("ABCABC")
 
-print("\n=== TON TEXTE ===")
-mon_texte = "Bienvenue chez les uchihas"  # Remplace par ton texte
+print("\n===TEXTE ===")
+mon_texte = "Bienvenue chez les uchihas"
 analyser_texte(mon_texte)
