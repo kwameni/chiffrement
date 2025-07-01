@@ -1,8 +1,3 @@
-# CHIFFREMENT HYBRIDE AES + RSA - VERSION ÉTUDIANT
-# ================================================
-# 
-# Ce programme montre comment utiliser AES et RSA ensemble pour chiffrer des données
-# 
 # PRINCIPE :
 # 1. On génère une clé AES pour chiffrer rapidement les données
 # 2. On utilise RSA pour chiffrer cette clé AES (sécurité)
@@ -154,7 +149,7 @@ def demonstration():
     print(f"   - Identiques ? {' OUI' if message_secret == message_dechiffre else '❌ NON'}")
 
 
-def test_avec_message_personnalise():
+def test_de_la_mort_qui_tue():
     
     print("\n" + "=" * 50)
     print(" Salut jeune saiyan")
@@ -182,9 +177,8 @@ def test_avec_message_personnalise():
 if __name__ == "__main__":    
     try:
         demonstration()
-        
-        # Test avec votre message
-        test_avec_message_personnalise()
+    
+        test_de_la_mort_qui_tue()
         
         print(f"\n PROGRAMME TERMINÉ AVEC SUCCÈS !")
         print(" Vous pouvez maintenant modifier les messages dans le code")
