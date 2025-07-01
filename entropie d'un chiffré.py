@@ -29,9 +29,9 @@ texte_test = "ABCDEF"
 resultat = calculer_entropie(texte_test)
 print(f"Entropie de '{texte_test}': {resultat:.2f}")
 
-# Comparaison - CORRECTION ICI
+# Comparaison
 print("\nComparaison:")
-print(f"AAAAAA: {calculer_entropie('AAAAAA'):.2f} (mauvais)")  # Corrigé !
+print(f"AAAAAA: {calculer_entropie('AAAAAA'):.2f} (mauvais)") 
 print(f"ABCDEF: {calculer_entropie('ABCDEF'):.2f} (bon)")
 
 def calculer_redondance(texte):
