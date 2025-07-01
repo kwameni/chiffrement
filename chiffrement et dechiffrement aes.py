@@ -33,15 +33,7 @@ class ChiffrementSimple:
         print(f"   - Clé privée : {len(self.cle_privee.export_key())} bytes")
     
     def chiffrer_message(self, message):
-        """
-        Étape 2 : Chiffrer un message avec AES + RSA
         
-        Args:
-            message (str): Le message secret à chiffrer
-            
-        Returns:
-            dict: Dictionnaire contenant tout ce qu'il faut pour déchiffrer
-        """
         print(f"\n Chiffrement du message : '{message}'")
         
         # Vérifier qu'on a les clés
@@ -76,15 +68,7 @@ class ChiffrementSimple:
         return resultat
     
     def dechiffrer_message(self, donnees_chiffrement):
-        """
-        Étape 3 : Déchiffrer un message
         
-        Args:
-            donnees_chiffrement (dict): Les données retournées par chiffrer_message()
-            
-        Returns:
-            str: Le message original déchiffré
-        """
         print("\n Déchiffrement du message...")
         
         # Vérifier qu'on a la clé privée
@@ -119,7 +103,7 @@ class ChiffrementSimple:
 # PROGRAMME PRINCIPAL - DÉMONSTRATION
 
 def demonstration():
-    """Fonction principale qui montre comment utiliser le chiffrement"""
+  
     
     print("🎓 DÉMONSTRATION CHIFFREMENT AES + RSA")
     print("=" * 50)
@@ -146,10 +130,10 @@ def demonstration():
     print(f"\n VÉRIFICATION :")
     print(f"   - Message original : '{message_secret}'")
     print(f"   - Message déchiffré : '{message_dechiffre}'")
-    print(f"   - Identiques ? {' OUI' if message_secret == message_dechiffre else '❌ NON'}")
+    print(f"   - Identiques ? {' OUI' if message_secret == message_dechiffre else ' NON'}")
 
 
-def test_de_la_mort_qui_tue():
+def test_avec_message_personnalise():
     
     print("\n" + "=" * 50)
     print(" Salut jeune saiyan")
@@ -169,16 +153,18 @@ def test_de_la_mort_qui_tue():
     print(f"\n RÉSULTAT FINAL :")
     print(f"   Message original : {votre_message}")
     print(f"   Message récupéré : {message_recupere}")
-    print(f"   Succès : {'' if votre_message == message_recupere else '❌'}")
+    print(f"   Succès : {'' if votre_message == message_recupere else ''}")
 
 
 # EXÉCUTION DU PROGRAMME
+# installer pycryptodome si pas installé
 
 if __name__ == "__main__":    
     try:
         demonstration()
-    
-        test_de_la_mort_qui_tue()
+        
+        # Test avec votre message
+        test_avec_message_personnalise()
         
         print(f"\n PROGRAMME TERMINÉ AVEC SUCCÈS !")
         print(" Vous pouvez maintenant modifier les messages dans le code")
